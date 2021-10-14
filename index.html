@@ -1,0 +1,180 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="bp.css">
+    <script src="third_party/d3.min.js"></script>
+    <script src="book.js"></script>
+</head>
+
+<body>
+<h1>Kirk's Factorio Blueprints</h1>
+
+I've played a lot of Factorio. Here are some of the blueprints I've designed over the years.
+
+<h2>Table of contents</h2>
+
+<ul>
+    <li><a href="#furnace">Upgradeable Furnace</a></li>
+    <li><a href="#rail">Railroads</a></li>
+    <li><a href="#circuit">Electronic Circuit Production</a></li>
+    <li><a href="#simple_oil">Simple Oil Refining</a></li>
+    <li><a href="#wide_oil">Wide Oil Refining</a></li>
+    <li><a href="#defense">Defenses</a></li>
+</ul>
+
+<hr>
+
+<h2 id="furnace">Upgradeable Furnace</h2>
+
+<div id="furnace_book"></div>
+
+<script>make_book("furnace_book", [
+    "furnace-starter.png",
+    "furnace-starter-mirrored.png",
+    "burner-furnace.png",
+    "electric-starter.png",
+    "electric-furnace.png",
+    "electric-stack.png",
+    "electric-stack-mirrored.png",
+])</script>
+
+<p>
+<a href="furnace.txt">Blueprint string.</a>
+
+<p>
+This blueprint book is meant to allow building stacks of burner furnaces, which may later be upgraded to 8-beacon electric furnaces with a minimum of disruption. The included deconstruction planner (not pictured) includes inserters, long-handed inserters, small electric poles, and steel furnaces. These items may be cleanly removed to make room for the electric furnaces. Likewise, the coal lines may be removed, and will leave the perfect amount of space for beacons.
+<p>
+The inserters are carefully arranged so that they will alternate on which lane of the input they will prefer to draw from, and so that they will alternate on which lane they will place their output.
+<p>
+As a known issue, the final inserters of the stack may not achieve perfect compression; it would be possible to correct this with some splitter usage, but I simply have not done so.
+
+<hr>
+
+<h2 id="rail">Railroads</h2>
+
+<div id="rail_book"></div>
+
+<script>make_book("rail_book", [
+    "rail-four-way.png",
+    "rail-t.png",
+    "rail-turn.png",
+    "rail-straight.png",
+    "rail-turnaround.png",
+    "rail-integrated-turnaround.png",
+    "rail-45-left.png",
+    "rail-45-right.png",
+    "rail-diagonal.png",
+    "rail-side-station.png",
+    "rail-big-station.png",
+    "rail-colors.png",
+])</script>
+
+<p>
+<a href="rail.txt">Blueprint string.</a>
+
+<p>
+These are my standard rail blueprints: Right hand drive, designed with six-long trains in mind, with a two track-width gap. Intersections have sufficient clearance to guarantee an exit built-in to their blueprints.
+<p>
+The design is highly modular. The intersections are designed so they may be dropped in-place over other existing tracks, as long as the power poles and signals match up (though some lamps and signals may need to be adjusted when inserting a new intersection over a straightaway). This modularity does mean that the intersections are not as compact as physically possible, but I deem the tradeoff to be well worth it.
+<p>
+A future iteration may add circuit wires to the power poles. There are uses for a train-network-wide circuit network, but I simply haven't employed them myself.
+
+<hr>
+
+<h2 id="circuit">Electronic Circuit Production</h2>
+
+<div id="circuit_book"></div>
+
+<script>make_book("circuit_book", [
+    "circuit-360.png",
+    "circuit-1800.png",
+    "circuit-1800-wide.png",
+    "circuit-2700.png",
+    "circuit-10800.png",
+])</script>
+
+<p>
+<a href="circuit.txt">Blueprint string.</a>
+
+<p>
+Various scales of electronic circuit production. The first is a quick-and-dirty handful of circuit assemblers, suitable for starting a new factory. The second scales that layout out to two full belts of circuits.
+<p>
+The third blueprint operates at that same scale, but blocks out room for the later installation of beacons. The fourth and fifth blueprints represent that fully moduled and beaconed layout, ultimately representing the production of four full blue belts of circuits.
+<p>
+The constant combinators in the blueprints mark out which belts correspond to which inputs and outputs. The programmed values represent the per-minute rates at which those items are consumed or produced, for each belt. (This is a standard technique which I have used in other blueprints as well.)
+
+<hr>
+
+<h2 id="simple_oil">Simple Oil Refining</h2>
+
+<div id="simple_oil_book"></div>
+
+<script>make_book("simple_oil_book", [
+    "simple-oil-starter.png",
+    "simple-oil-refinery-starter.png",
+    "simple-oil-light-starter.png",
+    "simple-oil-heavy-starter.png",
+    "simple-oil-refinery.png",
+    "simple-oil-light.png",
+    "simple-oil-heavy.png",
+])</script>
+
+<p>
+<a href="simple-oil.txt">Blueprint string.</a>
+
+<p>
+My basic oil refining setup, including cracking regulation. The horizontal rows of pipes form the basis of an oil product bus. In the context of the overall factory design, these rows of pipes (holding, in order, water, petroleum gas, light oil, heavy oil, and crude oil) are considered to extend indefinitely in either direction. Consumers of those oil products are then placed perpendicular to the bus. (I normally place consumers on the opposite side from the refineries, but conceivably you could place them on either side.)
+<p>
+It isn't marked, but the lone dead-end pipe just above the refinery starters is the input point for crude oil.
+<p>
+The refineries and chemical plants in the starter blueprints form the heads of stacks of production facilities; the other blueprints make it easy to extend those stacks as needed.
+
+<hr>
+
+<h2 id="wide_oil">Wide Oil Refining</h2>
+
+<div id="wide_oil_book"></div>
+
+<script>make_book("wide_oil_book", [
+    "wide-oil-starter.png",
+    "wide-oil-refinery-starter.png",
+    "wide-oil-light-starter.png",
+    "wide-oil-heavy-starter.png",
+    "wide-oil-refinery.png",
+    "wide-oil-light.png",
+    "wide-oil-heavy.png",
+])</script>
+
+<p>
+<a href="wide-oil.txt">Blueprint string.</a>
+
+<p>
+Basically identical in intention to the simple oil setup (above), but extended horizontally to leave plenty of room for beacons.
+
+<hr>
+
+<h2 id="defense">Defenses</h2>
+
+<div id="defense_book"></div>
+
+<script>make_book("defense_book", [
+    "defenses-20.png",
+    "defenses-100.png",
+    "defenses-200.png",
+    "defenses-corner.png",
+    "defenses-heavy-20.png",
+    "defenses-heavy-100.png",
+    "defenses-heavy-200.png",
+    "defenses-heavy-corner.png",
+], 2)</script>
+
+<p>
+<a href="defenses.txt">Blueprint string.</a>
+
+<p>
+My standard defensive blueprints, very useful for building massive walls across wide spans of terrain. The regular blueprints just throw down some lasers, which is adequate for most of the game. The "heavy" blueprints add quite a bit more firepower, and are perhaps overkill for the vanilla game, even at very high evolution factors. They also request uranium bullets via logistics, which requires a significant amount of infrastructure to support.
+<p>
+These blueprints are designed so that the heavy versions may be dropped in-place over existing light defenses. They are also designed to align themselves to the same two-tile grid that railroads use, which simplifies the problem of needing to drive railroads through walls.
+
+</body>
+</html>

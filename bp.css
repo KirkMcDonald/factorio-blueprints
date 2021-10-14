@@ -1,0 +1,40 @@
+:root {
+    --dark: #171717;
+    --main: #272b30;
+    --light: #3a3f44;
+    --foreground: #c8c8c8;
+    --accent: #ff7200;
+    --bright: #f1fff2;
+}
+body {
+    /*font-family: sans-serif;*/
+    color: var(--foreground);
+    background-color: var(--dark);
+    max-width: 40em;
+    margin-left: 3em;
+}
+a {
+    text-decoration: none;
+    color: var(--accent);
+}
+a:active, a:hover {
+    color: var(--bright);
+}
+.thumb {
+    max-width: 5em;
+    max-height: 5em;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 2px;
+    border: 2px solid var(--light);
+    padding: 5px;
+}
+.thumb:hover {
+    border-color: var(--bright);
+}
+.thumb.selected, .thumb.selected:hover {
+    border-color: var(--accent);
+}
+.big {
+    max-width: 40em;
+}
