@@ -20,6 +20,7 @@ I've played a lot of Factorio. Here are some of the blueprints I've designed ove
     <li><a href="#simple_oil">Simple Oil Refining</a></li>
     <li><a href="#wide_oil">Wide Oil Refining</a></li>
     <li><a href="#defense">Defenses</a></li>
+    <li><a href="#mall">Staged Mall</a></li>
 </ul>
 
 <hr>
@@ -175,6 +176,47 @@ Basically identical in intention to the simple oil setup (above), but extended h
 My standard defensive blueprints, very useful for building massive walls across wide spans of terrain. The regular blueprints just throw down some lasers, which is adequate for most of the game. The "heavy" blueprints add quite a bit more firepower, and are perhaps overkill for the vanilla game, even at very high evolution factors. They also request uranium bullets via logistics, which requires a significant amount of infrastructure to support.
 <p>
 These blueprints are designed so that the heavy versions may be dropped in-place over existing light defenses. They are also designed to align themselves to the same two-tile grid that railroads use, which simplifies the problem of needing to drive railroads through walls.
+
+<hr>
+
+<h2 id="mall">Staged Mall</h2>
+
+<div id="mall_book"></div>
+
+<script>make_book("mall_book", [
+    "mall-full.png",
+    "mall-starter.png",
+    "mall-defense.png",
+    "mall-adv-defense.png",
+    "mall-trains.png",
+    "mall-steam.png",
+    "mall-solar.png",
+    "mall-robots.png",
+    "mall-logistics.png",
+    "mall-circuits.png",
+    "mall-vehicles.png",
+    "mall-ammo.png",
+    "mall-oil.png",
+    "mall-equip.png",
+    "mall-adv-equip.png",
+    "mall-substation.png",
+    "mall-auto3.png",
+    "mall-artillery.png",
+    "mall-beacon.png",
+    "mall-stack-inserter.png",
+    "mall-cliff-explosive.png",
+    "mall-belts.png",
+])</script>
+
+<p>
+<a href="mall.txt">Blueprint string.</a>
+
+<p>
+A comprehensive mall design, split into various components so that it may be easily expanded as new technologies are researched.
+<p>
+There are a number of schools of thought when it comes to mall design. There are different philosophies about which items to include in the mall or not; and which intermediate products should be produced as part of the mall, or imported. This design favors importing items when they cannot be easily manufactured using ingredients directly required by other items in the mall, or when doing so would take significant amounts of space.
+<p>
+This mall notably does not include red belts, despite actually requiring red underground belts as part of its construction. The thinking here is that higher-tier belts are something of a resource hog, and may be best produced in their own dedicated production line with a more direct connection to a main bus or other source of materials. Nuclear reactor components are also missing, for similar reasons.
 
 </body>
 </html>
