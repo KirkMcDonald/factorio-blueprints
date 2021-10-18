@@ -15,7 +15,7 @@ function make_book(id, filenames, start) {
         .join("img")
             .classed("thumb", true)
             .classed("selected", (d, i) => i === start)
-            .attr("src", d => "images/" + d)
+            .attr("src", d => "thumbs/" + d)
             .on("click", function(event, d) {
                 big.attr("src", "images/" + d)
                 images.classed("selected", false)
